@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+  background: var(--violet) url('images/bg-mobile.svg') no-repeat top;
+  background-size: contain;
+  font-family: 'Poppins', sans-serif;
+  font-size: .9rem;
+  padding: 1.4em;
+}
+
+header > img {
+  width: 130px;
+}
+
+main {
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mockups-image {
+  background: url('images/illustration-mockups.svg') no-repeat center;
+  background-size: contain;
+  width: 100%;
+  height: 280px;
+  margin: 4em auto;
+}
+
+.content > button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5em;
+  background-color: white;
+  color: var(--violet);
+  padding: 1em;
+  margin: 1em 0;
+  width: 230px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
+  transition: background-color .2s, color .2s;
+}
+
+.content > button:hover {
+  background-color: var(--soft-magenta);
+  color: white;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: .75em;
+  margin-bottom: 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.social-media a {
+  --height: 25px;
+  width: 25px;
+  height: var(--height);
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  transition: background-color .2s, border .2s;
+}
+
+.social-media a:hover {
+  border: 1px solid var(--soft-magenta);
+  color: var(--soft-magenta);
+}
+
+.social-media a > i {
+  line-height: var(--height);
+  width: 100%;
+  vertical-align: middle;
+  color: white;
+  transition: color .2s;
+}
+
+.social-media a > i:hover {
+  color: var(--soft-magenta);
+}
+
+footer {
+  padding: 4em 0;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    background: var(--violet) url('images/bg-desktop.svg') no-repeat center;
+    padding: 2em 4em;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mockups-image {
+    flex: 1;
+    height: 30vw;
+  }
+
+  .content {
+    flex: 1;
+    padding: 0 3em;
+    text-align: initial;
+  }
+
+  .content > h2 {
+    font-size: 1.75rem;
+  }
+
+  footer {
+    padding: 2em 4em;
+  }
+
+  .social-media {
+    justify-content: flex-end;
+  }
+}
